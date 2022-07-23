@@ -8,7 +8,7 @@
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-    
+   
     private var characterImageView: UIImageView = {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,9 +29,6 @@ class CharacterTableViewCell: UITableViewCell {
         addSubview(characterImageView)
         addSubview(nameLabel)
         setupConstraints()
-        layer.masksToBounds = true
-        layer.cornerRadius = 8
-        contentView.layer.cornerRadius = 8
     }
     
     required init?(coder: NSCoder) {
@@ -52,7 +49,8 @@ class CharacterTableViewCell: UITableViewCell {
             characterImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
             
             nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 30),
-            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
 }

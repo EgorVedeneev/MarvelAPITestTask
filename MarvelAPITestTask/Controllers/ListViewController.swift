@@ -8,57 +8,30 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ListViewController: UIViewController {
 
     var results: MarvelJSON?
     
     var listCharacterView = ListCharactersView()
-    
-    var loadingView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 8
-        view.backgroundColor = .white.withAlphaComponent(0.8)
-        return view
-    }()
-    
-    var indicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        indicator.style = .large
-        return indicator
-    }()
+    var indicator2 = IndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view = listCharacterView
-        view.addSubview(loadingView)
-        loadingView.addSubview(indicator)
-        
+        view.addSubview(indicator2)
         
         setupConstraints()
         listCharacterView.tableView.dataSource = self
         listCharacterView.tableView.delegate = self
         listCharacterView.tableView.register(CharacterTableViewCell.self,
                                              forCellReuseIdentifier: "CharacterTableViewCell")
-        
         NetworkService.shared.delegate = self
         NetworkService.shared.getCharacter()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        showSpinner()
-    }
-    
-    private func showSpinner() {
-        indicator.startAnimating()
-        loadingView.isHidden = false
-    }
-
-    private func hideSpinner() {
-        indicator.stopAnimating()
-        loadingView.isHidden = true
+        indicator2.show()
     }
     
     func setupConstraints() {
@@ -68,25 +41,19 @@ class ViewController: UIViewController {
             listCharacterView.rightAnchor.constraint(equalTo: view.rightAnchor),
             listCharacterView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loadingView.heightAnchor.constraint(equalToConstant: 100),
-            loadingView.widthAnchor.constraint(equalToConstant: 100),
-            
-            indicator.centerXAnchor.constraint(equalTo: loadingView.centerXAnchor),
-            indicator.centerYAnchor.constraint(equalTo: loadingView.centerYAnchor),
+            indicator2.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            indicator2.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = results?.data.results.count else {
             return 0
         }
         
-        
-        hideSpinner()
+        indicator2.hide()
         return count
     }
 
@@ -108,7 +75,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: JSONResponseDelegate {
+extension ListViewController: JSONResponseDelegate {
     func passResults(_ results: MarvelJSON) {
         self.results = results
         DispatchQueue.main.async {

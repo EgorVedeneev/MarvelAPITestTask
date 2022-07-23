@@ -38,6 +38,7 @@ class CharacterCardView: UIView {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
+        layer.cornerRadius = 6
         addSubview(characterImageView)
         addSubview(nameLabel)
         addSubview(descriptionLabel)

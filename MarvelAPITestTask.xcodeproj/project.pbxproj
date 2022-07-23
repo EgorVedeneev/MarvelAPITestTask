@@ -8,17 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2582FAA8288B3AF80053A2A6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582FAA7288B3AF80053A2A6 /* CardViewController.swift */; };
-		2582FAAB288B529A0053A2A6 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582FAAA288B529A0053A2A6 /* UINavigationController.swift */; };
+		2582FAB0288BC7710053A2A6 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2582FAAF288BC7710053A2A6 /* IndicatorView.swift */; };
 		25E6A46C28894933004DD531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A46B28894933004DD531 /* AppDelegate.swift */; };
 		25E6A46E28894933004DD531 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A46D28894933004DD531 /* SceneDelegate.swift */; };
-		25E6A47028894933004DD531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A46F28894933004DD531 /* ViewController.swift */; };
+		25E6A47028894933004DD531 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A46F28894933004DD531 /* ListViewController.swift */; };
 		25E6A47528894937004DD531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E6A47428894937004DD531 /* Assets.xcassets */; };
 		25E6A47828894937004DD531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E6A47628894937004DD531 /* LaunchScreen.storyboard */; };
 		25E6A4812889532A004DD531 /* ListCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A4802889532A004DD531 /* ListCharactersView.swift */; };
 		25E6A48328895352004DD531 /* CharacterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A48228895352004DD531 /* CharacterCardView.swift */; };
 		25E6A486288955B0004DD531 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A485288955B0004DD531 /* CharactersModel.swift */; };
 		25E6A48828897567004DD531 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A48728897567004DD531 /* Extensions.swift */; };
-		25E6A48A28897985004DD531 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A48928897985004DD531 /* Constants.swift */; };
 		25E6A48C28897E96004DD531 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A48B28897E96004DD531 /* NetworkService.swift */; };
 		25E6A48F2889B39F004DD531 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E6A48E2889B39F004DD531 /* CharacterCell.swift */; };
 		EF3D941B453ED4A3876E324A /* Pods_MarvelAPITestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33EC17F29C05F18B6EF2EA8E /* Pods_MarvelAPITestTask.framework */; };
@@ -26,11 +25,11 @@
 
 /* Begin PBXFileReference section */
 		2582FAA7288B3AF80053A2A6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		2582FAAA288B529A0053A2A6 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		2582FAAF288BC7710053A2A6 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		25E6A46828894933004DD531 /* MarvelAPITestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelAPITestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E6A46B28894933004DD531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E6A46D28894933004DD531 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		25E6A46F28894933004DD531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25E6A46F28894933004DD531 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		25E6A47428894937004DD531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25E6A47728894937004DD531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25E6A47928894937004DD531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,7 +37,6 @@
 		25E6A48228895352004DD531 /* CharacterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCardView.swift; sourceTree = "<group>"; };
 		25E6A485288955B0004DD531 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
 		25E6A48728897567004DD531 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		25E6A48928897985004DD531 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		25E6A48B28897E96004DD531 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		25E6A48E2889B39F004DD531 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		33EC17F29C05F18B6EF2EA8E /* Pods_MarvelAPITestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAPITestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,10 +69,26 @@
 			children = (
 				25E6A46B28894933004DD531 /* AppDelegate.swift */,
 				25E6A46D28894933004DD531 /* SceneDelegate.swift */,
-				25E6A48928897985004DD531 /* Constants.swift */,
 				25E6A48728897567004DD531 /* Extensions.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		2582FAAD288B75550053A2A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				25E6A46F28894933004DD531 /* ListViewController.swift */,
+				2582FAA7288B3AF80053A2A6 /* CardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2582FAAE288B76690053A2A6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				25E6A48E2889B39F004DD531 /* CharacterCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		25E6A45F28894933004DD531 = {
@@ -101,6 +115,7 @@
 				2582FAA9288B4E1B0053A2A6 /* App */,
 				25E6A48428895472004DD531 /* Model */,
 				25E6A47F2889523C004DD531 /* Views */,
+				2582FAAD288B75550053A2A6 /* Controllers */,
 				25E6A47428894937004DD531 /* Assets.xcassets */,
 				25E6A47628894937004DD531 /* LaunchScreen.storyboard */,
 				25E6A47928894937004DD531 /* Info.plist */,
@@ -111,12 +126,10 @@
 		25E6A47F2889523C004DD531 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				25E6A46F28894933004DD531 /* ViewController.swift */,
-				2582FAAA288B529A0053A2A6 /* UINavigationController.swift */,
+				2582FAAE288B76690053A2A6 /* Cells */,
 				25E6A4802889532A004DD531 /* ListCharactersView.swift */,
 				25E6A48228895352004DD531 /* CharacterCardView.swift */,
-				25E6A48E2889B39F004DD531 /* CharacterCell.swift */,
-				2582FAA7288B3AF80053A2A6 /* CardViewController.swift */,
+				2582FAAF288BC7710053A2A6 /* IndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,18 +266,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E6A47028894933004DD531 /* ViewController.swift in Sources */,
+				25E6A47028894933004DD531 /* ListViewController.swift in Sources */,
 				25E6A48828897567004DD531 /* Extensions.swift in Sources */,
 				25E6A48328895352004DD531 /* CharacterCardView.swift in Sources */,
 				25E6A46C28894933004DD531 /* AppDelegate.swift in Sources */,
+				2582FAB0288BC7710053A2A6 /* IndicatorView.swift in Sources */,
 				25E6A48C28897E96004DD531 /* NetworkService.swift in Sources */,
 				25E6A48F2889B39F004DD531 /* CharacterCell.swift in Sources */,
 				25E6A486288955B0004DD531 /* CharactersModel.swift in Sources */,
 				25E6A4812889532A004DD531 /* ListCharactersView.swift in Sources */,
 				2582FAA8288B3AF80053A2A6 /* CardViewController.swift in Sources */,
-				2582FAAB288B529A0053A2A6 /* UINavigationController.swift in Sources */,
 				25E6A46E28894933004DD531 /* SceneDelegate.swift in Sources */,
-				25E6A48A28897985004DD531 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
