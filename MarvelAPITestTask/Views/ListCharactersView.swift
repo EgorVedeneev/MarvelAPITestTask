@@ -16,7 +16,7 @@ class ListCharactersView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
-        tableView.layer.cornerRadius = 8
+        tableView.layer.cornerRadius = Const.Corner.bigRadius.rawValue
         setupConstraints()
     }
     
@@ -27,7 +27,7 @@ class ListCharactersView: UIView {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            tableView.topAnchor.constraint(equalTo: topAnchor, constant: Const.Space.mediumSpace.rawValue),
             tableView.leftAnchor.constraint(equalTo: leftAnchor),
             tableView.rightAnchor.constraint(equalTo: rightAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),

@@ -20,7 +20,7 @@ class CharacterCardView: UIView {
     var nameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.font = .systemFont(ofSize: Const.FontSize.cardSize.rawValue, weight: .bold)
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
@@ -38,7 +38,7 @@ class CharacterCardView: UIView {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
-        layer.cornerRadius = 6
+        layer.cornerRadius = Const.Corner.smallRadius.rawValue
         addSubview(characterImageView)
         addSubview(nameLabel)
         addSubview(descriptionLabel)
@@ -56,14 +56,14 @@ class CharacterCardView: UIView {
             characterImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             characterImageView.heightAnchor.constraint(equalTo: widthAnchor),
             
-            nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 10),
-            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40),
+            nameLabel.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: Const.Space.smallSpace.rawValue),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Const.Space.largeSpace.rawValue),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Const.Space.largeSpace.rawValue),
             nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             
-            descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
-            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: Const.Space.mediumSpace.rawValue),
+            descriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Const.Space.mediumSpace.rawValue),
+            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Const.Space.mediumSpace.rawValue),
         ])
     }
 }

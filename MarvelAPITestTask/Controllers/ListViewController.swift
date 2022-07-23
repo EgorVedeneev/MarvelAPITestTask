@@ -22,19 +22,27 @@ class ListViewController: UIViewController {
         view.addSubview(indicator2)
         
         setupConstraints()
-        listCharacterView.tableView.dataSource = self
-        listCharacterView.tableView.delegate = self
-        listCharacterView.tableView.register(CharacterTableViewCell.self,
-                                             forCellReuseIdentifier: "CharacterTableViewCell")
+        setupTableView()
+        fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        indicator2.show() // show indicator without observers and etc. cause
+    }
+    
+    private func fetchData() {
         NetworkService.shared.delegate = self
         NetworkService.shared.getCharacter()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        indicator2.show()
+    private func setupTableView() {
+        listCharacterView.tableView.dataSource = self
+        listCharacterView.tableView.delegate = self
+        listCharacterView.tableView.register(CharacterTableViewCell.self,
+                                             forCellReuseIdentifier: "CharacterTableViewCell")
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             listCharacterView.topAnchor.constraint(equalTo: view.topAnchor),
             listCharacterView.leftAnchor.constraint(equalTo: view.leftAnchor),
@@ -52,7 +60,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let count = results?.data.results.count else {
             return 0
         }
-        
         indicator2.hide()
         return count
     }

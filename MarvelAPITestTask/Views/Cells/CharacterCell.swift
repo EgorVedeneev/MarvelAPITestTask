@@ -13,13 +13,13 @@ class CharacterTableViewCell: UITableViewCell {
         let imgView = UIImageView()
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.layer.masksToBounds = true
-        imgView.layer.cornerRadius = 6
+        imgView.layer.cornerRadius = Const.Corner.smallRadius.rawValue
         return imgView
     }()
     
     private var nameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.font = .systemFont(ofSize: Const.FontSize.cellSize.rawValue, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -42,15 +42,15 @@ class CharacterTableViewCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            characterImageView.heightAnchor.constraint(equalToConstant: 75),
-            characterImageView.widthAnchor.constraint(equalToConstant: 75),
-            characterImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            characterImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Const.Space.mediumSpace.rawValue),
+            characterImageView.heightAnchor.constraint(equalToConstant: Const.ImageSize.listSize.rawValue),
+            characterImageView.widthAnchor.constraint(equalToConstant: Const.ImageSize.listSize.rawValue),
+            characterImageView.topAnchor.constraint(equalTo: topAnchor, constant: Const.Space.smallSpace.rawValue),
+            characterImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Const.Space.smallSpace.rawValue),
             
-            nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 30),
+            nameLabel.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: Const.Space.mediumSpace.rawValue),
             nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Const.Space.mediumSpace.rawValue)
         ])
     }
 }
