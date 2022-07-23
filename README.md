@@ -1,5 +1,5 @@
 # MarvelAPITestTask
 
-MVC
-no SOLID
-no Clean Architecture
+MVC,
+no SOLID,
+no Clean Architecture.
