@@ -19,8 +19,8 @@ class IndicatorView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 8
-        backgroundColor = .white.withAlphaComponent(0.8)
+        layer.cornerRadius = Const.Corner.bigRadius.rawValue
+        backgroundColor = .white.withAlphaComponent(Const.Alpha.indicator.rawValue)
         addSubview(indicator)
         setupConstraints()
     }
@@ -41,8 +41,8 @@ class IndicatorView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 100),
-            widthAnchor.constraint(equalToConstant: 100),
+            heightAnchor.constraint(equalToConstant: Const.ImageSize.indicator.rawValue),
+            widthAnchor.constraint(equalToConstant: Const.ImageSize.indicator.rawValue),
             
             indicator.centerXAnchor.constraint(equalTo: centerXAnchor),
             indicator.centerYAnchor.constraint(equalTo: centerYAnchor),

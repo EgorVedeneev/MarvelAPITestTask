@@ -21,7 +21,7 @@ class CharacterCardView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: Const.FontSize.cardSize.rawValue, weight: .bold)
-        label.numberOfLines = 0
+        label.numberOfLines = Const.LabelLines.notLimited.rawValue
         label.textAlignment = .center
         return label
     }()
@@ -29,7 +29,7 @@ class CharacterCardView: UIView {
     var descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
+        label.numberOfLines = Const.LabelLines.notLimited.rawValue
         label.lineBreakMode = .byWordWrapping
         return label
     }()

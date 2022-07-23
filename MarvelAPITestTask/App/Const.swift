@@ -22,6 +22,7 @@ class Const {
     
     enum ImageSize: CGFloat {
         case listSize = 75
+        case indicator = 100
     }
     
     enum LabelLines: Int {
@@ -32,5 +33,9 @@ class Const {
         case smallSpace = 10
         case mediumSpace = 20
         case largeSpace = 40
+    }
+    
+    enum Alpha: CGFloat {
+        case indicator = 0.8
     }
 }
