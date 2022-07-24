@@ -14,6 +14,7 @@ class ListViewController: UIViewController {
     
     var listCharacterView = ListCharactersView()
     var indicator2 = IndicatorView()
+    var label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ListViewController: UIViewController {
     
     private func fetchData() {
         NetworkService.shared.delegate = self
-        NetworkService.shared.getCharacter()
+        NetworkService.shared.getCharacters()
     }
     
     private func setupTableView() {
